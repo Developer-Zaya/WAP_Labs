@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        body {
+            font-family:Georgia;
+            background-color: rgb(194, 202, 148);
+        }
+        h1 {
+            font-weight: 200;
+            font-size: xx-large;
+            color:rgb(13, 45, 83);
+            font-weight: bold;
+        }
+
+        h2 {
+            font-weight: 150;
+            font-size: large;
+            color:rgb(108, 134, 167);
+            font-weight: bold;
+        }
+        .header {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .header > img {
+            width: 80px;
+        }
+        .header > button {
+            height: 20px;
+            vertical-align:auto;
+        }
+        .my-button{
+            border: 3px solid rgb(165, 165, 165);
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: bold;
+        }
+        .my-button2{
+            border: 3px solid rgb(165, 165, 165);
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: bold;
+            float: right;
+            margin-right: 10%;
+        }
+        .my-text{
+            border: 3px solid rgb(165, 165, 165);
+            width: 50px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: bold;
+        }
+        .sub-title{
+            margin-left:10%;
+            margin-bottom: 50px;
+        }
+        table{
+            border:1px solid black;
+        }
+        th{
+            border:1px solid black;
+        }
+        td {
+            border:1px solid black;
+            text-align: center;
+        }
+        .my_table {
+            border:1px solid black;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .my_table > div{
+            border:1px solid black;
+            margin: 1px;
+            flex-direction: row;
+            display: flex;
+            flex-wrap:nowrap;
+        }
+        .my_table > div > div{
+            border:1px solid black;
+            margin: 1px;
+            width:max-content;
+        }
+        .divTable {
+        display: table;         
+        width: auto;    
+        border: 1px solid #666666;     
+        width: 80%;    
+        border-spacing: 5px; 
+        }
+        .divRow {
+        display: table-row;
+        width: 25%;   
+        }
+        .divCell {
+        float: left; 
+        display: table-column; 
+        border: 1px solid #666666;
+        }
+        .my-toggle{
+            flex-direction: row;
+            display: flex;
+            justify-content: center; 
+        }
+        .toggle-text{
+            font-size: large;
+            font-weight: bold;
+        }
+    </style>
+    <div class="header">
+        <img src="./src/icon.png" alt="Icon">
+        <h1>Welcom, Zaya</h1>
+        <p class="my-button" style="width: 100px;">Logout</p>
+    </div>
+    <hr />
+</head>
+<body>
+    <h2 class="sub-title">Product list</h2>
+    <div class="header">
+        <table style="width:80%">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>Node.js</td>
+                <td>9.99</td>
+                <td>8</td>
+                <td><img src="./src/cart.png" alt="Cart" width="25px"></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>19.99</td>
+                <td>5</td>
+                <td><img src="./src/cart.png" alt="Cart" width="25px"></td>
+            </tr>
+            <tr>
+                <td>Angular</td>
+                <td>29.99</td>
+                <td>13</td>
+                <td><img src="./src/cart.png" alt="Cart" width="25px"></td>
+            </tr>
+        </table>
+    </div>
+    <h2 class="sub-title">Your shopping cart</h2>
+    <div class="header">
+        <table style="width:80%">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Node.js</td>
+                <td>9.99</td>
+                <td>9.99</td>
+                <td class="my-toggle">
+                    <p class="toggle-text">-</p>
+                    <p class="my-text">1</p>
+                    <p class="toggle-text">+</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Angular</td>
+                <td>29.99</td>
+                <td>290.99</td>
+                <td class="my-toggle">
+                    <p class="toggle-text">-</p>
+                    <p class="my-text">10</p>
+                    <p class="toggle-text">+</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;"><p style="margin-right: 80px;">Total: 300.98</p></td>
+            </tr>
+        </table>
+    </div>
+    <p class="my-button2" style="width: 150px;" >PLace order</p>
+</body>
+</html>
