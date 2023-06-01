@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .column{
+            width: 45%;
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column > div, label{
+            width: 45%;
+            margin-bottom: 20px;
+        }
+        .column > div{
+            font-weight: bold; 
+        }
+        .column > input{
+            height:fit-content;
+        }
+
+        .column > select{
+            height:fit-content;
+            width: 25%;
+        }
+        .main_form {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .main_freame{
+            border:2px solid #A2CBBC;
+        }
+        .header {
+            flex-direction: row;
+            display: flex;
+            width: 100%;
+            background-color: #A2CBBC;
+        }
+        .footer {
+            flex-direction: row;
+            display: flex;
+            width: 100%;
+            background-color: #E3E3E3;
+        }
+        .header > select{
+            background-color: #A2CBBC;
+            margin-left: 50px;
+            border: none;
+        }
+        .header > p{
+            margin-left: 10px; 
+            font-weight: bold; 
+            font-size: larger;
+        }
+        .break {
+            width: 45%;
+            height: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .untext{
+            text-decoration: underline;
+            width: 45%;
+            margin-bottom: 20px;
+        }
+        .mbutton{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            background-color: #7AA897;
+            border: none;
+            color: white;
+            font-weight: bold;
+            width: 100px;
+            height: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main_freame">
+        <div class="header">
+            <p>Workshop registration</p>
+            <select name="actions">
+                <option disabled selected>More actions</option>
+                <option>action 1</option>
+                <option>action 2</option>
+                <option>action 3</option>
+                <option>action 4</option>
+            </select>
+        </div>
+        
+        <form class="main_form">
+            <p class="untext" style="width: 45%;">Register now while seats are available!</p>
+            <div class="break"></div>
+            <div class="column">
+                <div>First name <span style="color: red;">*</span></div> <input name="q" required>  
+                <div>Last name <span style="color: red;">*</span></div> <input name="q" required>
+                <div>Company/Institution <span style="color: red;">*</span></div> <input name="q" required>
+                <div>Address <span style="color: red;">*</span></div> <input name="q" style="height:100px; margin-bottom: 20px;" required>
+                <div>City </div> <input name="q" >
+                <div>State/Province/Region </div> 
+                <select>
+                    <option disabled selected>-select-</option>
+                    <option>action 1</option>
+                    <option>action 2</option>
+                    <option>action 3</option>
+                    <option>action 4</option>
+                </select>
+                <div>Country </div>
+                <select>
+                    <option disabled selected>-select-</option>
+                    <option>action 1</option>
+                    <option>action 2</option>
+                    <option>action 3</option>
+                    <option>action 4</option>
+                </select>
+                <div>Email <span style="color: red;">*</span></div> <input name="q" required>
+                <div>Phone number <span style="color: red;">*</span></div> <input name="q" required>                
+            </div>
+            <div class="column">
+                <p class="untext">Lunch</p>
+                <div class="break"></div>
+                <div>Meal preference </div>
+                <select>
+                    <option disabled selected>-select-</option>
+                    <option>action 1</option>
+                    <option>action 2</option>
+                    <option>action 3</option>
+                    <option>action 4</option>
+                </select>
+                <p class="untext">Payment details</p>
+                <div class="break"></div>
+                <div>Payment mode </div>
+                <label> <input type="radio" name="cc" value="visa" checked="checked" > Cash</label>
+                <div class="break"></div>
+                <label> <input type="radio" name="cc" value="mastercard" > Cheque</label>
+                <div class="break"></div>
+                <label> <input type="radio" name="cc" value="amex" > Demand draft</label>
+                <div>DD/cheque No. </div> <input name="q" >
+                <div>Drawn on (Bank name) </div> <input name="q" >
+                <div>Payable at </div> <input name="q" >
+            </div>
+        </form>
+        <div class="footer">
+            <div class="break"></div>
+            <div>
+                <button class="mbutton">Submit</button>
+                <button class="mbutton">Reset</button>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fdeveloper-zaya.github.io%2FWAP_Labs%2Fform.html">
+            <img src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png" alt="Validate">
+        </a>
+    </p>
+</body>
+</html>
